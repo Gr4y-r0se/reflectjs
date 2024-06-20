@@ -1,9 +1,0 @@
-answers.txt
-
-results.php
-
-?query=h";}alert(1);function%20x(){//
-
-
-contact.php
-
