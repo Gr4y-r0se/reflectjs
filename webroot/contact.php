@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
+    <!-- 
+        Try setting utm_source and seeing what happens (See? I'm not totally evil)
+    -->
 </head>
 <body>
     <header>
@@ -62,7 +65,7 @@
                     }
                     function u() {
                     e("#btn-slugify").addEventListener("click", function () {
-                        var t = e("<?php echo isset($_GET['utm_source']) ? $_GET['utm_source'] : 'false'; ?>").value;
+                        var t = e("<?php $utm_source = isset($_GET['utm_source']) ? $_GET['utm_source'] : 'utm_source'; $utm_source = html_entity_decode($utm_source, ENT_QUOTES, 'UTF-8'); $utm_source = str_replace(['<', '>'], '', $utm_source); echo $utm_source;?>").value;
                         e("#output-slugify").innerText = o(t);
                     });
                     }
