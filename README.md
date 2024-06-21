@@ -10,9 +10,20 @@ Clone this repo:
 git clone https://github.com/Gr4y-r0se/reflectjs.git
 ```
 
-Navigate to root directory:
+Navigate into the directory:
 ```
-cd reflectjs/webroot
+cd reflectjs
+```
+
+Set up and seed the database:
+```
+php init_db.php
+php seed_db.php
+```
+
+Navigate into webroot:
+```
+cd webroot
 ```
 
 and then, spin up a low budget PHP server:
