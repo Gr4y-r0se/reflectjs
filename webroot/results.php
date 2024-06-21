@@ -50,11 +50,11 @@
         <p>&copy; 2024 Our Website</p>
     </footer>
     <script type="text/javascript">
-        function jobSearch(searchURLPartial) {
-            var jobSearchURL = searchURLPartial;
-            var searchUrl = jobSearchURL + "/search/";
-            var locationHrefGCS = searchUrl + "?q=" + "<?php echo $_GET['query']; ?>";
-            window.location.href = locationHrefGCS;
+        function Search(searchURLPartial) {
+            var SearchURL = searchURLPartial;
+            var searchUrl = SearchURL + "/search/";
+            var locationHref = searchUrl + "?q=" + "<?php echo $_GET['query']; ?>";
+            window.location.href = locationHref;
         }
         jQuery("#close-wid").on("click", function() {
             jQuery("#rolewidget").remove()
