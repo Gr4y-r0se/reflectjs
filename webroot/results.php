@@ -53,7 +53,7 @@
         function Search(searchURLPartial) {
             var SearchURL = searchURLPartial;
             var searchUrl = SearchURL + "/search/";
-            var locationHref = searchUrl + "?q=" + "<?php echo $_GET['query']; ?>";
+            var locationHref = searchUrl + "?q=" + "<?php $query = isset($_GET['query']) ? $_GET['query'] : 'query'; $query = html_entity_decode($query, ENT_QUOTES, 'UTF-8'); $query = str_replace(['<', '>'], '', $query); echo $query;?>";
             window.location.href = locationHref;
         }
         jQuery("#close-wid").on("click", function() {
